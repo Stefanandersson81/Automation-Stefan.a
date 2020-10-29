@@ -46,7 +46,7 @@ describe('Test suite', function(){
         dashBoardFuncs.performLogout(cy, 'Tester Hotel')
 
 })
-//test case 8
+//test case 6
     it('Perform logout', function(){
         indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
         dashBoardFuncs.chechTitleOfDashboardPage(cy)
