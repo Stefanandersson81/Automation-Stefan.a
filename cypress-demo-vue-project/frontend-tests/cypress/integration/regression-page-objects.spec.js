@@ -34,31 +34,22 @@ describe('Test suite', function(){
 
     it('check "Bills" button ', function(){
         indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
-        indexFuncs.checkBillsButton(cy, 'Bills')
+        indexFuncs.checkBillsButton(cy, 'Reservation')
         dashBoardFuncs.performLogout(cy, 'Tester Hotel')
 
 })
-/*
+
 //test case 5
     it('check "Reservations" button ', function(){
         indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
-        indexFuncs.checkRoomsButton(cy, 'Reservations')
+        indexFuncs.checkReservationsButton(cy, 'Reservations')
         dashBoardFuncs.performLogout(cy, 'Tester Hotel')
 
 })
-//test case 6
-    it('check "visit rooms" button ', function(){
-        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
-        indexFuncs.checkRoomsButton(cy, 'Rooms')
-        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
-
-})
-
-
 //test case 8
     it('Perform logout', function(){
         indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
         dashBoardFuncs.chechTitleOfDashboardPage(cy)
         dashBoardFuncs.performLogout(cy, 'Tester Hotel')
-        })*/
+        })
 })

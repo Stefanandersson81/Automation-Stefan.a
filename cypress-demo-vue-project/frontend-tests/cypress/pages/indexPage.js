@@ -35,13 +35,22 @@ function checkBillsButton(cy){
     cy.get(':nth-child(3) > .btn').click()
     cy.contains('Tester Hotel Overview')
 }
+
+function checkReservationsButton(cy){
+    cy.get(':nth-child(4) > .btn').click()
+    cy.contains('Reservations')
+    cy.get(':nth-child(3) > .btn').click()
+    cy.contains('Tester Hotel Overview')
+}
+
 //exports
 module.exports = {
     chechTitleOfIndexPage,
     performValidLogin,
     checkRoomsButton,
     checkClientsButton,
-    checkBillsButton
+    checkBillsButton,
+    checkReservationsButton
 }
 
 
