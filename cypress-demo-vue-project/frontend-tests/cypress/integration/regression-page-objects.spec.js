@@ -11,9 +11,54 @@ describe('Test suite', function(){
         indexFuncs.chechTitleOfIndexPage(cy)
     })
 
-// test case
+// test case1
     it('Perform login and logout', function(){
         indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
-        dashBoardFuncs.performLogout(cy, 'Login')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+
     })
+//test case 2
+    it('check "visit rooms" button ', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        indexFuncs.checkRoomsButton(cy, 'Rooms')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+
+    })
+//test case 3
+    it('check "Clients" button ', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        indexFuncs.checkClientsButton(cy, 'Clients')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+    })
+//test case 4
+
+    it('check "Bills" button ', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        indexFuncs.checkBillsButton(cy, 'Bills')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+
+})
+/*
+//test case 5
+    it('check "Reservations" button ', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        indexFuncs.checkRoomsButton(cy, 'Reservations')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+
+})
+//test case 6
+    it('check "visit rooms" button ', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        indexFuncs.checkRoomsButton(cy, 'Rooms')
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+
+})
+
+
+//test case 8
+    it('Perform logout', function(){
+        indexFuncs.performValidLogin(cy, targets.username,targets.password, 'Tester Hotel Overview')
+        dashBoardFuncs.chechTitleOfDashboardPage(cy)
+        dashBoardFuncs.performLogout(cy, 'Tester Hotel')
+        })*/
 })
